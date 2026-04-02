@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital Planet is Nepal's most advanced AI-powered tech and digital marketing system. We help businesses grow with automation, AI tools, and data-driven strategies.">
+    <meta name="keywords" content="AI marketing Nepal, digital growth, AI tools for business, automate marketing Nepal, Digital Planet, Nepali businesses, startups, entrepreneurs, tech solutions Nepal">
+    <title>Digital Planet | Nepal's Advanced AI Tech & Growth System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0D47A1;
+            --secondary-blue: #1976D2;
+            --tech-grey-dark: #263238;
+            --tech-grey-medium: #546E7A;
+            --tech-grey-light: #ECEFF1;
+            --accent-red: #D32F2F;
+            --accent-green: #4CAF50;
+            --neon-blue: #00d4ff;
+            --neon-purple: #9d4edd;
+            --white: #FFFFFF;
+            --font-primary: 'Roboto', sans-serif;
+            --font-secondary: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            color: var(--tech-grey-dark);
+            background-color: var(--white);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-secondary);
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+
+        h1 { font-size: 2.8rem; }
+        h2 { font-size: 2.2rem; text-align: center; margin-bottom: 2rem; }
+        h3 { font-size: 1.5rem; }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--tech-grey-medium);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--secondary-blue);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-red);
+            color: var(--white);
+            border: 2px solid var(--accent-red);
+        }
+
+        .btn-primary:hover {
+            background-color: #C62828;
+            border-color: #C62828;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--tech-grey-light);
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+        }
+
+        nav .logo {
+            font-family: var(--font-secondary);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav .logo span {
+            color: var(--accent-red);
+        }
+
+        nav .logo::before {
+            content: "🌐";
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: var(--tech-grey-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--accent-red);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--primary-blue);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        #home {
+            background: linear-gradient(rgba(13, 71, 161, 0.85), rgba(13, 71, 161, 0.75)), url('https://picsum.photos/seed/digitalplanet/1920x1080.jpg') no-repeat center center/cover;
+            color: var(--white);
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        #home .container {
+            max-width: 800px;
+        }
+
+        #home h1 {
+            color: var(--white);
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        #home p {
+            color: var(--tech-grey-light);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        #home .cta-buttons .btn {
+            margin: 0 10px;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+        }
+
+        #home .btn-primary {
+            background-color: var(--accent-red);
+            color: var(--white);
+        }
+
+        #home .btn-primary:hover {
+            background-color: #C62828;
+        }
+
+        #home .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        #home .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--primary-blue);
+        }
+
+        /* About Section */
+        #about .about-content {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        #about .about-text {
+            flex: 1;
+        }
+
+        #about .about-visual {
+            flex: 1;
+            background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+            min-height: 250px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #about .about-visual::before {
+            content: "🚀";
+            font-size: 4rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .service-card .icon {
+            font-size: 2.5rem;
+            color: var(--secondary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        /* Why Section */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .why-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border-left: 4px solid var(--accent-red);
+        }
+
+        .why-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .why-card h3 {
+            color: var(--accent-red);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .why-card h3::before {
+            content: "✓";
+            color: var(--accent-red);
+            background: rgba(211, 47, 47, 0.1);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* AI Tools Section */
+        .tools-categories {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tools-categories button {
+            background: var(--tech-grey-light);
+            border: 1px solid var(--tech-grey-medium);
+            color: var(--tech-grey-dark);
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .tools-categories button.active, .tools-categories button:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+            border-color: var(--primary-blue);
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tool-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .tool-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .tool-item h4 {
+            color: var(--secondary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .tool-item .category-tag {
+            display: inline-block;
+            background-color: var(--tech-grey-light);
+            color: var(--tech-grey-medium);
+            font-size: 0.8rem;
+            padding: 3px 8px;
+            border-radius: 10px;
+            margin-top: 0.5rem;
+        }
+
+        /* Blog Section */
+        #blog {
+            background-color: #f8f9fa;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .blog-card .featured-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-card .featured-image:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+        }
+
+        .blog-card .featured-image:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+
+        .category-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(255,255,255,0.95);
+            color: var(--primary-blue);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-card h3 {
+            color: var(--tech-grey-dark);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+
+        .excerpt {
+            color: var(--tech-grey-medium);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--tech-grey-medium);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            color: var(--primary-blue);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--accent-red);
+        }
+
+        .view-all-btn {
+            display: block;
+            margin: 0 auto;
+            padding: 12px 30px;
+            background: var(--white);
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .view-all-btn:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        /* Audit Section */
+        #audit {
+            background: #0a0a1a;
+            color: #f0f0f0;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #audit::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,212,255,0.1) 0%, rgba(157,78,221,0.1) 50%, transparent 70%);
+            animation: pulse 10s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+        }
+
+        #audit .container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        #audit h2 {
+            color: var(--neon-blue);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(0,212,255,0.5);
+        }
+
+        #audit p {
+            color: #b0b0b0;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .audit-form {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(0,212,255,0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--neon-blue);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        #audit .form-group input,
+        #audit .form-group select,
+        #audit .form-group textarea {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(157,78,221,0.3);
+            color: #f0f0f0;
+        }
+
+        #audit .form-group input:focus,
+        #audit .form-group select:focus,
+        #audit .form-group textarea:focus {
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 5px rgba(0,212,255,0.3);
+            outline: none;
+        }
+
+        #audit .form-group input::placeholder,
+        #audit .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        #audit .btn-audit {
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            color: #0a0a1a;
+            font-weight: bold;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 2rem auto 0;
+            font-size: 1.1rem;
+        }
+
+        #audit .btn-audit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,212,255,0.4);
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .trust-badge::before {
+            content: '✅';
+            color: var(--accent-green);
+            display: block;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .audit-report-features {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(0,212,255,0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(0,212,255,0.2);
+        }
+
+        .audit-report-features h3 {
+            color: var(--neon-blue);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .audit-report-features ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .audit-report-features li {
+            color: #b0b0b0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .audit-report-features li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--neon-purple);
+            font-weight: bold;
+        }
+
+        .thank-you-message {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            background: rgba(76,175,80,0.1);
+            border: 1px solid var(--accent-green);
+            border-radius: 12px;
+            color: #f0f0f0;
+            font-size: 1.1rem;
+        }
+
+        .thank-you-message.show {
+            display: block;
+        }
+
+        /* How It Works Section */
+        .how-it-works-steps {
+            display: flex;
+            justify-content: space-around;
+            gap: 2rem;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            flex-basis: 30%;
+            min-width: 250px;
+            padding: 1.5rem;
+        }
+
+        .step .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            background-color: var(--secondary-blue);
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .step h3 {
+            color: var(--primary-blue);
+        }
+
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--secondary-blue);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .testimonial-card p.quote {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--tech-grey-dark);
+        }
+
+        .testimonial-card p.author {
+            font-weight: bold;
+            text-align: right;
+            color: var(--primary-blue);
+        }
+
+        /* Pricing Section */
+        .pricing-plans {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .pricing-plan {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-plan:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .pricing-plan.premium {
+            border: 2px solid var(--secondary-blue);
+        }
+
+        .pricing-plan h3 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+        }
+
+        .pricing-plan .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent-red);
+            margin: 1rem 0;
+        }
+
+        .pricing-plan .price span {
+            font-size: 1rem;
+            color: var(--tech-grey-medium);
+        }
+
+        .pricing-plan ul {
+            list-style: none;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+
+        .pricing-plan ul li {
+            margin-bottom: 0.75rem;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .pricing-plan ul li::before {
+            content: '✓';
+            color: var(--secondary-blue);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .pricing-plan .btn {
+            margin-top: 1rem;
+            width: 100%;
+        }
+
+        /* Contact Section */
+        #contact .container {
+            max-width: 800px;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        #contact .form-group input,
+        #contact .form-group textarea {
+            transition: border-color 0.3s ease;
+        }
+
+        #contact .form-group input:focus,
+        #contact .form-group textarea:focus {
+            border-color: var(--secondary-blue);
+            outline: none;
+        }
+
+        #contact .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .social-links a {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--tech-grey-light);
+        }
+
+        .social-links a:hover {
+            color: var(--white);
+            background-color: var(--accent-red);
+            transform: translateY(-3px);
+        }
+
+        .newsletter-signup {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .newsletter-signup form {
+            display: flex;
+            gap: 0.5rem;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .newsletter-signup input[type="email"] {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            flex: 1;
+        }
+
+        .newsletter-signup button {
+            padding: 12px 20px;
+            border-radius: 0 5px 5px 0;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border: 1px solid var(--primary-blue);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .newsletter-signup button:hover {
+            background-color: var(--secondary-blue);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--tech-grey-dark);
+            color: var(--tech-grey-light);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer p {
+            color: var(--tech-grey-light);
+            margin: 0;
+        }
+
+        footer .footer-links {
+            margin-top: 0.5rem;
+        }
+
+        footer .footer-links a {
+            color: var(--tech-grey-light);
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        footer .footer-links a:hover {
+            color: var(--accent-red);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            #home h1 { font-size: 2.8rem; }
+            #home p { font-size: 1.1rem; }
+            .services-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: var(--white);
+                position: absolute;
+                top: 70px;
+                left: 0;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            nav ul.active {
+                display: flex;
+            }
+            nav ul li {
+                margin: 0;
+                width: 100%;
+                text-align: center;
+            }
+            nav ul li a {
+                display: block;
+                padding: 1rem;
+                border-bottom: 1px solid var(--tech-grey-light);
+            }
+            nav ul li:last-child a {
+                border-bottom: none;
+            }
+            .menu-toggle {
+                display: block;
+            }
+
+            #home { min-height: 70vh; padding-top: 70px; }
+            #home h1 { font-size: 2.2rem; }
+            #home p { font-size: 1rem; }
+            #home .cta-buttons .btn { margin: 10px 0; display: block; width: 80%; margin-left: auto; margin-right: auto; }
+
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+
+            #about .about-content { flex-direction: column; }
+            #about .about-visual { margin-top: 1rem; min-height: 200px; }
+
+            .how-it-works-steps { flex-direction: column; align-items: center; }
+            .step { flex-basis: 100%; max-width: 400px; }
+
+            .pricing-plans { flex-direction: column; align-items: center; }
+            .pricing-plan { width: 90%; max-width: 400px; }
+
+            .newsletter-signup form { flex-direction: column; }
+            .newsletter-signup input[type="email"] { border-radius: 5px; }
+            .newsletter-signup button { border-radius: 5px; }
+
+            #audit .form-row { grid-template-columns: 1fr; }
+            #audit .audit-report-features ul { grid-template-columns: 1fr; }
+            #audit .trust-badges { flex-direction: column; gap: 1rem; }
+
+            #blog .blog-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .container { width: 95%; }
+            #home h1 { font-size: 1.8rem; }
+            #home p { font-size: 0.9rem; }
+            #home .cta-buttons .btn { padding: 12px 20px; font-size: 0.9rem; }
+            nav .logo { font-size: 1.5rem; }
+            .menu-toggle { font-size: 1.3rem; }
+            .service-card, .tool-item, .testimonial-card, .pricing-plan, .contact-form { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="#home" class="logo">Digital<span>Planet</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+            <ul id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why">Why Us</a></li>
+                <li><a href="#tools">AI Tools</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#audit">Free Audit</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home">
+            <div class="container">
+                <h1>Nepal's Most Advanced AI-Powered Tech & Growth System</h1>
+                <p>Digital Planet helps Nepali businesses dominate online using AI automation, data intelligence, and next-gen digital strategies — built for the future of Nepal.</p>
+                <div class="cta-buttons">
+                    <a href="#pricing" class="btn btn-primary">Get Started Free</a>
+                    <a href="#tools" class="btn btn-secondary">Explore AI Tools</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2>About Digital Planet</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Nepal's Leading AI Tech Growth System</h3>
+                        <p>We are Nepal's leading AI tech growth system — helping businesses automate, scale, and compete globally from Nepal. Our cutting-edge solutions transform how Nepali companies operate in the digital landscape.</p>
+                        <p>With advanced AI automation, data-driven strategies, and deep understanding of the Nepali market, we empower businesses to achieve exponential growth. From Kathmandu to the global stage, Digital Planet is your partner in technological evolution.</p>
+                    </div>
+                    <div class="about-visual">
+                        AI for Nepali Growth
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="container">
+                <h2>Advanced Tech & AI Solutions</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="icon">🤖</div>
+                        <h3>AI Business Automation</h3>
+                        <p>Automate your sales, customer support, and content systems using AI. Save 20+ hours/week and never miss a lead.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">📊</div>
+                        <h3>Data Intelligence & Analytics</h3>
+                        <p>Turn raw business data into clear decisions. We build custom dashboards and AI models that tell you exactly where your money is going and how to get more.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🌐</div>
+                        <h3>Web & App Development (AI-Enhanced)</h3>
+                        <p>We design fast, modern websites and apps with AI personalization built in — optimized for Nepali users and global performance.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🎯</div>
+                        <h3>AI Content & Social Media Engine</h3>
+                        <p>We build fully automated content systems — from scripting to posting — powered by AI that understands your audience and market.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🔍</div>
+                        <h3>Digital Audit & Growth Consulting</h3>
+                        <p>Full analysis of your digital presence: website, social media, ads, and funnels. We find where you're leaking money and fix it.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🧠</div>
+                        <h3>AI Chatbot & CRM Integration</h3>
+                        <p>Deploy 24/7 intelligent chatbots and connect your entire customer journey into one smart system.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section id="why">
+            <div class="container">
+                <h2>Why Digital Planet?</h2>
+                <div class="why-grid">
+                    <div class="why-card">
+                        <h3>AI-First Approach</h3>
+                        <p>We don't just do marketing. We build AI systems that run your growth on autopilot. Our solutions learn, adapt, and optimize continuously, ensuring your business stays ahead of the curve in Nepal's rapidly evolving digital landscape.</p>
+                    </div>
+                    <div class="why-card">
+                        <h3>Built for Nepal</h3>
+                        <p>Deep understanding of Nepali markets, consumer behavior, and local platforms. We know what works in Nepal — from payment systems to social media trends, ensuring your strategies resonate with local audiences while meeting global standards.</p>
+                    </div>
+                    <div class="why-card">
+                        <h3>Results or Refund</h3>
+                        <p>We are so confident in our systems, we back them with performance guarantees. If our AI solutions don't deliver measurable growth within the agreed timeframe, we'll make it right. Your success is our success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Tools Section -->
+        <section id="tools">
+            <div class="container">
+                <h2>AI Tools Marketplace</h2>
+                <p style="text-align:center; max-width: 700px; margin-left:auto; margin-right:auto;">Discover a curated selection of built-in and recommended AI tools to supercharge your marketing efforts. Categorized for your convenience.</p>
+                <div class="tools-categories" id="toolsCategories">
+                    <button class="active" data-filter="all">All Tools</button>
+                    <button data-filter="seo">SEO</button>
+                    <button data-filter="content">Content</button>
+                    <button data-filter="design">Design</button>
+                    <button data-filter="analytics">Analytics</button>
+                    <button data-filter="engagement">Engagement</button>
+                </div>
+                <div class="tools-grid" id="toolsGrid">
+                    <div class="tool-item" data-category="seo">
+                        <h4>Keyword Genius AI</h4>
+                        <p>Uncover high-potential keywords for your target audience globally.</p>
+                        <span class="category-tag">SEO</span>
+                    </div>
+                    <div class="tool-item" data-category="content">
+                        <h4>ContentCraft AI</h4>
+                        <p>Generate blog posts, social media updates, and ad copy in minutes with multi-language support.</p>
+                        <span class="category-tag">Content</span>
+                    </div>
+                    <div class="tool-item" data-category="design">
+                        <h4>DesignSpark AI</h4>
+                        <p>Create stunning logos and social media graphics with AI assistance tailored to your brand.</p>
+                        <span class="category-tag">Design</span>
+                    </div>
+                    <div class="tool-item" data-category="analytics">
+                        <h4>InsightAI Metrics</h4>
+                        <p>Track your campaign performance with AI-driven analytics and predictive insights.</p>
+                        <span class="category-tag">Analytics</span>
+                    </div>
+                    <div class="tool-item" data-category="engagement">
+                        <h4>EngageBot AI</h4>
+                        <p>Automate responses and engage customers on social media in multiple languages.</p>
+                        <span class="category-tag">Engagement</span>
+                    </div>
+                    <div class="tool-item" data-category="seo">
+                        <h4>RankBoost AI</h4>
+                        <p>AI-powered on-page SEO analysis and recommendations for global markets.</p>
+                        <span class="category-tag">SEO</span>
+                    </div>
+                    <div class="tool-item" data-category="content">
+                        <h4>GlobalWriter AI</h4>
+                        <p>AI tool specialized in generating marketing content in 50+ languages.</p>
+                        <span class="category-tag">Content</span>
+                    </div>
+                    <div class="tool-item" data-category="analytics">
+                        <h4>PredictiveLead AI</h4>
+                        <p>Forecast marketing trends and identify potential leads using AI across markets.</p>
+                        <span class="category-tag">Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog">
+            <div class="container">
+                <div class="blog-header">
+                    <h2>Digital Planet Insights</h2>
+                    <p>AI tips, growth strategies, and digital marketing secrets for Nepali businesses.</p>
+                </div>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="featured-image"></div>
+                        <span class="category-tag">AI Marketing</span>
+                        <div class="blog-content">
+                            <h3>5 Ways AI Is Changing How Nepali Businesses Get Customers in 2025</h3>
+                            <p class="excerpt">Most businesses in Nepal are still doing marketing manually. Here's how AI is giving smart businesses an unfair advantage...</p>
+                            <div class="blog-meta">
+                                <span>4 min read</span>
+                                <span>May 15, 2025</span>
+                            </div>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="featured-image"></div>
+                        <span class="category-tag">Social Media</span>
+                        <div class="blog-content">
+                            <h3>Why Your Facebook Page Gets Views But No Sales (And How to Fix It)</h3>
+                            <p class="excerpt">High reach but zero conversions? You're not alone. This is the #1 problem we see in Nepali business pages and here's the exact fix...</p>
+                            <div class="blog-meta">
+                                <span>5 min read</span>
+                                <span>May 12, 2025</span>
+                            </div>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="featured-image"></div>
+                        <span class="category-tag">Growth Strategy</span>
+                        <div class="blog-content">
+                            <h3>The Simple 3-Step System That Turned a Kathmandu Restaurant's Slow Season Into Its Best Month</h3>
+                            <p class="excerpt">One local restaurant used our AI content system to generate 3x more walk-ins during their slowest month. Here's what they did...</p>
+                            <div class="blog-meta">
+                                <span>6 min read</span>
+                                <span>May 10, 2025</span>
+                            </div>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="view-all-btn">View All Articles →</button>
+            </div>
+        </section>
+
+        <!-- Free Audit Section -->
+        <section id="audit">
+            <div class="container">
+                <h2>🔍 Get Your Free Digital Audit — See What an Expert Sees</h2>
+                <p>Paste your social media profiles or website URL below. Our AI will analyze your digital presence and tell you exactly what's working, what's broken, and where you're losing money.</p>
+                
+                <div id="auditFormContainer">
+                    <form id="auditForm" class="audit-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="businessName">Business Name</label>
+                                <input type="text" id="businessName" name="businessName" required placeholder="Enter your business name">
+                            </div>
+                            <div class="form-group">
+                                <label for="industry">Industry / Niche</label>
+                                <input type="text" id="industry" name="industry" required placeholder="e.g., Restaurant, E-commerce, Education">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="facebookURL">Facebook Page URL</label>
+                                <input type="text" id="facebookURL" name="facebookURL" required placeholder="https://facebook.com/yourbusiness">
+                            </div>
+                            <div class="form-group">
+                                <label for="instagramURL">Instagram Profile URL</label>
+                                <input type="text" id="instagramURL" name="instagramURL" required placeholder="https://instagram.com/yourbusiness">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tiktokURL">TikTok Profile URL (Optional)</label>
+                                <input type="text" id="tiktokURL" name="tiktokURL" placeholder="https://tiktok.com/@yourbusiness">
+                            </div>
+                            <div class="form-group">
+                                <label for="websiteURL">Website URL (Optional)</label>
+                                <input type="text" id="websiteURL" name="websiteURL" placeholder="https://yourwebsite.com">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="budget">Monthly Marketing Budget in NPR</label>
+                                <select id="budget" name="budget" required>
+                                    <option value="">Select your budget range</option>
+                                    <option value="under-5k">Under 5,000</option>
+                                    <option value="5k-20k">5,000–20,000</option>
+                                    <option value="20k-50k">20,000–50,000</option>
+                                    <option value="50k-plus">50,000+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="challenge">Biggest Challenge</label>
+                                <textarea id="challenge" name="challenge" required placeholder="Tell us your #1 struggle with getting customers online"></textarea>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn-audit">Analyze My Digital Presence →</button>
+                    </form>
+                    
+                    <div class="thank-you-message" id="thankYouMessage">
+                        🚀 Your audit request has been received! Our AI + expert team will review your profiles and send your detailed report within 24 hours. Check your email.
+                    </div>
+                </div>
+                
+                <div class="trust-badges">
+                    <div class="trust-badge">Reviewed by AI + Human Expert</div>
+                    <div class="trust-badge">100% Free, No Credit Card</div>
+                    <div class="trust-badge">Report Delivered in 24 Hours</div>
+                </div>
+                
+                <div class="audit-report-features">
+                    <h3>What You'll Get in Your Audit Report:</h3>
+                    <ul>
+                        <li>Social media profile strength score (out of 100)</li>
+                        <li>Content quality & consistency analysis</li>
+                        <li>Audience engagement breakdown</li>
+                        <li>Competitor gap analysis</li>
+                        <li>Revenue leak detection</li>
+                        <li>Top 5 action items to grow NOW</li>
+                        <li>Estimated monthly revenue being lost</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="how-it-works-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Choose Your Goal</h3>
+                        <p>Define what you want to achieve – more leads, higher engagement, better brand visibility, or global expansion.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Select AI Service/Tool</h3>
+                        <p>Pick from our range of AI-powered services or tools that align with your specific business objectives.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Watch Your Business Grow</h3>
+                        <p>Implement the AI strategies and witness tangible results as your business expands its digital footprint worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <div class="container">
+                <h2>Testimonials & Success Stories</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="quote">"Digital Planet's AI automation transformed our entire business. We're saving 25 hours weekly and our lead conversion increased by 300%. Truly Nepal's most advanced growth system!"</p>
+                        <p class="author">- Rajesh Gurung, Tech Startup CEO</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="quote">"The data intelligence dashboard they built is incredible. We finally know exactly where every rupee goes and how to maximize returns. Digital Planet understands Nepal like no other agency."</p>
+                        <p class="author">- Sunita Shrestha, E-commerce Director</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="quote">"From local business to competing globally — Digital Planet made it possible. Their AI systems work like magic. If you're serious about growth in Nepal, this is the only choice."</p>
+                        <p class="author">- Aarav Karki, Manufacturing Company Owner</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing">
+            <div class="container">
+                <h2>Our Pricing Plans</h2>
+                <div class="pricing-plans">
+                    <div class="pricing-plan">
+                        <h3>Starter Plan</h3>
+                        <p class="price">NPR 0<span>/month</span></p>
+                        <p>Get started with essential AI marketing tools.</p>
+                        <ul>
+                            <li>Basic AI Keyword Suggestions</li>
+                            <li>Limited AI Content Snippets (5/month)</li>
+                            <li>Basic Social Media Analytics</li>
+                            <li>Access to 1 AI Audit Tool</li>
+                            <li>Community Support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary">Sign Up for Free</a>
+                    </div>
+                    <div class="pricing-plan premium">
+                        <h3>Advanced Pro Plan</h3>
+                        <p class="price">NPR 9999<span>/month</span></p>
+                        <p>Full access to advanced AI features and strategic support.</p>
+                        <ul>
+                            <li>Advanced AI Keyword Research & Strategy</li>
+                            <li>Unlimited AI Content Generation</li>
+                            <li>AI-Driven Social Media Scheduling & Posting</li>
+                            <li>Full Suite of AI Audit Tools</li>
+                            <li>Automated Campaign Management Features</li>
+                            <li>AI Website Personalization Insights</li>
+                            <li>Monthly AI Strategy Sessions</li>
+                            <li>Multi-language Support</li>
+                            <li>Priority Support</li>
+                            <li>Performance Guarantee</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Choose Advanced Pro</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p style="text-align:center; max-width: 700px; margin-left:auto; margin-right:auto;">Have questions or ready to transform your business with AI? Reach out to us! We're here to help Nepali businesses succeed globally.</p>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In (Optional):</label>
+                            <input type="text" id="service" name="service">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message:</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Send Inquiry</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Connect With Us</h3>
+                    <p>Email: info@digitalplanet.com.np</p>
+                    <p>Phone / WhatsApp: +977 98XXXXXXXX</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="newsletter-signup">
+                        <h4>Subscribe to Our AI Marketing Insights Newsletter</h4>
+                        <form id="newsletterForm">
+                            <input type="email" name="newsletter_email" placeholder="Enter your email" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Digital Planet. All Rights Reserved. Nepal's Advanced Tech & AI Growth System.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.innerHTML = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('#navLinks a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    menuToggle.innerHTML = '☰';
+                }
+            });
+        });
+
+        // Active Navigation Link Highlighting
+        const sections = document.querySelectorAll('section');
+        const navLi = document.querySelectorAll('nav ul li a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLi.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href').substring(1) === current) {
+                    a.classList.add('active');
+                }
+            });
+        });
+
+        // AI Tools Marketplace Filter
+        const filterButtons = document.querySelectorAll('#toolsCategories button');
+        const toolItems = document.querySelectorAll('#toolsGrid .tool-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Manage active button state
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                toolItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry! We will get back to you soon.');
+            contactForm.reset();
+        });
+
+        // Newsletter Form Submission
+        const newsletterForm = document.getElementById('newsletterForm');
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = newsletterForm.querySelector('input[type="email"]');
+            alert(`Thank you for subscribing with ${emailInput.value}!`);
+            newsletterForm.reset();
+        });
+
+        // Audit Form Submission
+        const auditForm = document.getElementById('auditForm');
+        const auditFormContainer = document.getElementById('auditFormContainer');
+        const thankYouMessage = document.getElementById('thankYouMessage');
+
+        auditForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Hide form and show thank you message
+            auditForm.style.display = 'none';
+            thankYouMessage.classList.add('show');
+            
+            // Scroll to thank you message
+            thankYouMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+
+        // View All Articles Button
+        document.querySelector('.view-all-btn').addEventListener('click', function() {
+            alert('Blog feature coming soon! Stay tuned for more insightful articles.');
+        });
+
+        // Read More Links
+        document.querySelectorAll('.read-more').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Full article coming soon! Check back later for the complete content.');
+            });
+        });
+    </script>
+
+</body>
+</html>
